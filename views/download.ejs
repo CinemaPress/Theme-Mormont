@@ -162,7 +162,7 @@
                                     <div class="title">
                                         <a href="<%- movie.url %>" class="link" title="<%= movie.title %>"><%= movie.title %></a>
                                     </div>
-                                    <div class="desc"><% if (movie.genres) { %><%- movie.genres %><% } %></div>
+                                    <div class="desc"><% if (movie.genres) { %><%- movie.genres %><% } else { %>...<% } %></div>
                                 </div>
                             </div>
 
