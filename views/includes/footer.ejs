@@ -26,7 +26,7 @@
             <% if (page.social.instagram) { %><span> • </span><a href="<%- page.social.instagram %>" target="_blank">Instagram</a><% } %>
         </span>
         <% } %>
-        <span> • </span><%- page.email %>
+        <span> • </span><span id="mylo">Activate JS</span><script>(function(d,i,l,r){d.getElementById(i).innerHTML=l+'@'+r;})(window.document,'mylo','<%- page.email.split('@')[0] %>','<%- page.email.split('@')[1] %>');</script>
     </span>
 
     <div style="float:right;  text-align: right; width:300px; padding-top: 12px; padding-bottom: 12px;">
