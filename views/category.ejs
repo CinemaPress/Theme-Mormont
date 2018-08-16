@@ -118,6 +118,12 @@
                         </nav>
                         <% } %>
 
+                        <% if (typeof content === 'object' && page.comments) { %>
+                        <div style="padding: 10px;">
+                            <%- page.comments %>
+                        </div>
+                        <% } %>
+
                         <% if (page.seo) { %>
                         <div class="seo">
                             <%- page.seo %>
