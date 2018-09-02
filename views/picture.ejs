@@ -65,6 +65,12 @@
                             <div id="episodesList" data-id="<%- movie.kp_id %>"></div>
                         </div>
 
+                        <% if (typeof page.adv === 'object' && page.adv.over) { %>
+                        <div style="margin: 10px; text-align: center;">
+                            <%- page.adv.over %>
+                        </div>
+                        <% } %>
+
                         <ul class="nav nav-tabs">
                             <li>
                                 <a href="<%- movie.url %>">Описание</a>
@@ -100,6 +106,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        <% if (typeof page.adv === 'object' && page.adv.under) { %>
+                        <div style="margin: 10px; text-align: center;">
+                            <%- page.adv.under %>
+                        </div>
+                        <% } %>
 
                         <% if (typeof contents === 'object' && contents.length) { %>
                         <div style="clear: both"></div>
