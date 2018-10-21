@@ -1,12 +1,12 @@
 <% if (typeof top === 'object' && top.length) { %>
-<h3 class="h3">Топ</h3>
+<h3 class="h3"><%- page.l.top %></h3>
 <ul class="list-unstyled related">
     <% top.forEach(function (movie, i) { %>
         <li style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><%- i+1 %>. <a href="<%- movie.url %>" title="<%= movie.title %>"><%- movie.title %></a></li>
     <% }); %>
 </ul>
 <% } else if (typeof slider === 'object' && slider.length) { %>
-<h3 class="h3">Советуем</h3>
+<h3 class="h3"><%- page.l.popular %></h3>
 <ul class="list-unstyled related">
     <% slider.forEach(function (movie, i) { %>
     <li style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><%- i+1 %>. <a href="<%- movie.url %>" title="<%= movie.title %>"><%- movie.title %></a></li>
@@ -15,7 +15,7 @@
 <% } %>
 
 <% if (typeof soon === 'object' && soon.length) { %>
-<h3 class="h3">Премьеры</h3>
+<h3 class="h3"><%- page.l.premieres %></h3>
 <% soon.forEach(function (movie) { %>
     <div>
         <a href="<%- movie.url %>" class="cinemapress-news" style="background-image:url(<%- movie.poster %>);">
@@ -28,7 +28,7 @@
 <% } %>
 
 <% if (typeof news === 'object' && news.length) { %>
-<h3 class="h3" style="margin-top: 15px">Новости</h3>
+<h3 class="h3" style="margin-top: 15px"><%- page.l.news %></h3>
 <% news.forEach(function (content) { %>
 <div>
     <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url(<%- content.image %>);">
@@ -41,7 +41,7 @@
 <% } %>
 
 <% if (typeof recent === 'object' && recent.length) { %>
-<h3 class="h3" style="margin-top: 15px">Комментарии</h3>
+<h3 class="h3" style="margin-top: 15px"><%- page.l.comments %></h3>
 <% recent.forEach(function (comment) { %>
 <div>
     <div class="cinemapress-recent">
@@ -59,7 +59,7 @@
                     <span>
                         <%- comment.user %>
                     </span><span>
-                        сказал(а)
+                        <%- page.l.said %>
                     </span><span>
                         <%- comment.date %>
                     </span>
