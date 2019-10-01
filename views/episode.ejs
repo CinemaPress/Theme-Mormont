@@ -109,7 +109,7 @@
                             <% } %>
                         </ul>
 
-                        <div class="tab-content" style="width:100%;height:370px">
+                        <div id="cinemapress-player" class="tab-content">
                             <%- page.player %>
                         </div>
 
@@ -161,11 +161,21 @@
                         if (movies.hasOwnProperty(type) && movies[type].length) {
                         movies[type].forEach(function (category) { %>
 
-                        <h2 class="h3"><%- category.name %></h2>
+                        <h2 class="h3">
+                            <%- category.name %>
+                            <div class="randomMovieRelated">
+                                <div class="cinemapress-random-related"
+                                     onclick="window.location.href='<%- category.url %>?random'"
+                                     title="<%- page.l.random %>">
+                                    <img src="/themes/mormont/public/images/dice.svg" alt="<%- page.l.random %>">
+                                </div>
+                            </div>
+                        </h2>
 
                         <div class="row items">
 
                             <% if (category.movies.length) {
+                            category.movies.splice(4, category.movies.length % 4);
                             category.movies.forEach(function (movie) { %>
 
                             <div class="col-xs-3 item">
