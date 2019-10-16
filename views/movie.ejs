@@ -29,7 +29,7 @@
                         <div class="data clearfix">
                             <div class="poster-data">
                                 <div class="poster">
-                                    <img src="<%- movie.poster %>" class="img-responsive" alt="<%= page.title %>" title="<%= page.title %>" id="cinemapress-poster">
+                                    <img src="<%- movie.poster %>" class="img-responsive" alt="<%= page.title %>" title="<%= page.title %>" data-cinemapress-poster="<%- movie.poster %>">
                                     <span class="label label-danger"><% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %><% } else { %><%- movie.year %><% } %></span>
                                 </div>
 
