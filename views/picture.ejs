@@ -50,6 +50,7 @@
                                 <% if (movie.countries_url) { %><li><strong><%- page.l.countries %>:</strong> <%- movie.countries_url %></li><% } %>
                                 <% if (movie.directors_url) { %><li><strong><%- page.l.directors %>:</strong> <%- movie.directors_url %></li><% } %>
                                 <% if (movie.actors_url) { %><li><strong><%- page.l.actors %>:</strong> <%- movie.actors_url %></li><% } %>
+                                <% if (movie.tags_url) { %><li><strong><%- page.l.tags %>:</strong> <%- movie.tags_url %></li><% } %>
                                 <% if (movie.quality) { %><li><strong><%- page.l.quality %>:</strong> <%- movie.quality %></li><% } %>
                                 <% if (movie.translate) { %><li><strong><%- page.l.translate %>:</strong> <%- movie.translate %></li><% } %>
                                 <% if (movie.kp_vote) { %><li><strong><%- page.l.rating %> <%- page.l.kp %>:</strong> <%- movie.kp_rating/10 %> (<%- movie.kp_vote %>)</li><% } %>
@@ -118,7 +119,7 @@
                         <% contents.forEach(function (content) { %>
                         <div style="float: left; width: 50%;">
                             <div style="margin: 0; padding: 10px 0">
-                                <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url(<%- content.image %>);">
+                                <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url('<%- content.image %>');">
                                     <div class="cinemapress-news-title">
                                         <%= content.title %>
                                     </div>
@@ -144,9 +145,9 @@
                             <%- category.name %>
                             <div class="randomMovieRelated">
                                 <div class="cinemapress-random-related"
-                                     onclick="window.location.href='<%- category.url %>?random'"
+                                     onclick="window.location.href='<%- (category.url.indexOf('?')+1 ? category.url + '&random' : category.url + '?random') %>'"
                                      title="<%- page.l.random %>">
-                                    <img src="/themes/mormont/public/images/dice.svg" alt="<%- page.l.random %>">
+                                    <img src="/themes/<%- page.theme %>/public/images/dice.svg" alt="<%- page.l.random %>">
                                 </div>
                             </div>
                         </h2>
