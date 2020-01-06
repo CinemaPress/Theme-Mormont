@@ -2,7 +2,7 @@
 <html lang="<%- page.language %>">
 <head>
 
-    <% include includes/head.ejs %>
+    <%- include('includes/head.ejs'); -%>
 
 </head>
 <body>
@@ -15,9 +15,9 @@
                 <div class="row">
 
                     <% if (typeof page.adv === 'object' && page.adv.top) { %>
-                    <div style="text-align: center; margin: 10px auto">
-                        <%- page.adv.top %>
-                    </div>
+                        <div style="text-align: center; margin: 10px auto">
+                            <%- page.adv.top %>
+                        </div>
                     <% } %>
 
                     <div class="col-md-9">
@@ -27,40 +27,44 @@
                         </div>
 
                         <% if (typeof categories === 'object' && categories.length) { %>
-                        <div style="clear: both"></div>
-                        <% categories.forEach(function (content) { %>
-                        <div style="float:left;width:50%;">
-                            <div style="margin:10px;padding:0;position:relative">
-                                <div class="cinemapress-categories" style="background-image:url('<%- content.image %>');"></div>
-                                <a href="<%- content.url %>" class="cinemapress-categories-title"><%= content.title %></a>
-                            </div>
-                        </div>
-                        <% }); %>
-                        <div style="clear: both"></div>
+                            <div style="clear: both"></div>
+                            <% categories.forEach(function (content) { %>
+                                <div style="float:left;width:50%;">
+                                    <div style="margin:10px;padding:0;position:relative">
+                                        <div class="cinemapress-categories" style="background-image:url('<%- content.image %>');"></div>
+                                        <a href="<%- content.url %>" class="cinemapress-categories-title"><%= content.title %></a>
+                                    </div>
+                                </div>
+                            <% }); %>
+                            <div style="clear: both"></div>
                         <% } %>
 
                         <% if (page.seo) { %>
-                        <div class="seo">
-                            <%- page.seo %>
-                        </div>
+                            <div class="seo">
+                                <%- page.seo %>
+                            </div>
                         <% } %>
 
                     </div>
                     <div class="col-md-3">
 
-                        <% include includes/right.ejs %>
+                        <%- include('includes/right.ejs'); -%>
 
                     </div>
                 </div>
 
             </div>
 
-            <% include includes/footer.ejs %>
+            <%- include('includes/footer.ejs'); -%>
 
         </div>
     </div>
 
-    <% include includes/left.ejs %>
+    <%- include('includes/left.ejs'); -%>
+
 </div>
+
+<%- page.codes.footer %>
+
 </body>
 </html>

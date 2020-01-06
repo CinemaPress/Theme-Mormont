@@ -25,25 +25,25 @@
 
         <h4><%- page.l.genres %></h4>
         <% page.urls.genres.forEach(function(genre) { %>
-        <a href="<%- genre.url %>" class="sidebar-link"><%- genre.title %></a>
+            <a href="<%- genre.url %>" class="sidebar-link"><%- genre.title %></a>
         <% }); %>
 
         <h4><%- page.l.countries %></h4>
         <% page.urls.countries.slice(0,9).forEach(function(country) { %>
-        <a href="<%- country.url %>" class="sidebar-link"><%- country.title %></a>
+            <a href="<%- country.url %>" class="sidebar-link"><%- country.title %></a>
         <% }); %>
 
         <h4><%- page.l.years %></h4>
         <% page.urls.years.slice(0,9).forEach(function(year) { %>
-        <a href="<%- year.url %>" class="sidebar-link"><%- year.title %></a>
+            <a href="<%- year.url %>" class="sidebar-link"><%- year.title %></a>
         <% }); %>
 
     </div>
 
     <% if (typeof page.adv === 'object' && page.adv.left) { %>
-    <div style="text-align: center; margin: 10px auto">
-        <%- page.adv.left %>
-    </div>
+        <div style="text-align: center; margin: 10px auto">
+            <%- page.adv.left %>
+        </div>
     <% } %>
 
 </div>

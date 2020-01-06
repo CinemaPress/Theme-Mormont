@@ -1,9 +1,9 @@
 <div class="footer">
 
     <% if (typeof page.adv === 'object' && page.adv.bottom) { %>
-    <div style="text-align: center; margin: 10px auto">
-        <%- page.adv.bottom %>
-    </div>
+        <div style="text-align: center; margin: 10px auto">
+            <%- page.adv.bottom %>
+        </div>
     <% } %>
 
     <div class="footer-text">
@@ -17,14 +17,14 @@
 
     <span style="float:left; padding-top: 12px; padding-bottom: 12px;">
         <% if (page.social) { %>
-        <span>
-            <% if (page.social.vk) { %><a href="<%- page.social.vk %>" target="_blank"><%- page.l.vk %></a><span> • </span><% } %>
-            <% if (page.social.facebook) { %><a href="<%- page.social.facebook %>" target="_blank">facebook</a><span> • </span><% } %>
-            <% if (page.social.telegram) { %><a href="<%- page.social.telegram %>" target="_blank"><%- page.l.telegram %></a><span> • </span><% } %>
-            <% if (page.social.twitter) { %><a href="<%- page.social.twitter %>" target="_blank">twitter</a><span> • </span><% } %>
-            <% if (page.social.youtube) { %><a href="<%- page.social.youtube %>" target="_blank"><%- page.l.youtube %></a><span> • </span><% } %>
-            <% if (page.social.instagram) { %><a href="<%- page.social.instagram %>" target="_blank"><%- page.l.instagram %></a><span> • </span><% } %>
-        </span>
+            <span>
+                <% if (page.social.vk) { %><a href="<%- page.social.vk %>" target="_blank"><%- page.l.vk %></a><span> • </span><% } %>
+                <% if (page.social.facebook) { %><a href="<%- page.social.facebook %>" target="_blank">facebook</a><span> • </span><% } %>
+                <% if (page.social.telegram) { %><a href="<%- page.social.telegram %>" target="_blank"><%- page.l.telegram %></a><span> • </span><% } %>
+                <% if (page.social.twitter) { %><a href="<%- page.social.twitter %>" target="_blank">twitter</a><span> • </span><% } %>
+                <% if (page.social.youtube) { %><a href="<%- page.social.youtube %>" target="_blank"><%- page.l.youtube %></a><span> • </span><% } %>
+                <% if (page.social.instagram) { %><a href="<%- page.social.instagram %>" target="_blank"><%- page.l.instagram %></a><span> • </span><% } %>
+            </span>
         <% } %>
         <span id="mylo">Activate JS</span><script>(function(d,i,l,r){d.getElementById(i).innerHTML=l+'@'+r;})(window.document,'mylo','<%- page.email.split('@')[0] %>','<%- page.email.split('@')[1] %>');</script>
     </span>
@@ -35,21 +35,19 @@
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var url = window.location.href.replace(window.location.hash, '');
-            var title = document.title;
-            var fb = document.querySelector('.btn-fb');
-            var vk = document.querySelector('.btn-vk');
-            var tw = document.querySelector('.btn-tw');
-            var ok = document.querySelector('.btn-ok');
-            if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url);
-            if (vk) vk.href = 'http://vk.com/share.php?url='+encodeURIComponent(url)+'&title='+title;
-            if (tw) tw.href = 'https://twitter.com/intent/tweet?url='+encodeURIComponent(url)+'&text='+title;
-            if (ok) ok.href = 'http://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl='+encodeURIComponent(url);
-        });
+      document.addEventListener('DOMContentLoaded', function() {
+        var url = window.location.href.replace(window.location.hash, '');
+        var title = document.title;
+        var fb = document.querySelector('.btn-fb');
+        var vk = document.querySelector('.btn-vk');
+        var tw = document.querySelector('.btn-tw');
+        var ok = document.querySelector('.btn-ok');
+        if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url);
+        if (vk) vk.href = 'http://vk.com/share.php?url='+encodeURIComponent(url)+'&title='+title;
+        if (tw) tw.href = 'https://twitter.com/intent/tweet?url='+encodeURIComponent(url)+'&text='+title;
+        if (ok) ok.href = 'http://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl='+encodeURIComponent(url);
+      });
 
     </script>
-
-    <%- page.codes.footer %>
 
 </div>
