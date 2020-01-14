@@ -11,7 +11,7 @@
         </form>
 
         <div class="randomMovieMenu">
-            <a href="/?random" class="sidebar-link cinemapress-random-menu"><%- page.l.lucky %></a>
+            <a href="/?random=<%- Math.random() %>" class="sidebar-link cinemapress-random-menu"><%- page.l.lucky %></a>
         </div>
         <a href="javascript:void(0)" class="sidebar-link continueViewingBlock" id="continueViewing" style="display: none"><%- page.l.continue %>?</a>
 
