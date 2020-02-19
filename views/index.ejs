@@ -41,7 +41,7 @@
                             <div class="row items">
 
                                 <% if (category.movies.length) {
-                                category.movies.forEach(function (movie) { %>
+                                category.movies.forEach(function (movie) { if (movie.hide) { return; } %>
 
                                     <div class="col-xs-3 item">
                                         <a href="<%- movie.url %>">
