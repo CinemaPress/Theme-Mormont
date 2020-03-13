@@ -30,10 +30,13 @@
                             <h3 class="h3">
                                 <%- category.name %>
                                 <div class="randomMovieIndex">
-                                    <div <% if (!category.url) { %>style="display:none"<% } %> class="cinemapress-random-index"
-                                         onclick="window.location.href='<%- (category.url && category.url.indexOf('?')+1 ? category.url + '&random=' : category.url + '?random=') %><%- Math.random() %>'"
+                                    <div <% if (!category.url) { %>style="display:none"
+                                            <% } %>
+                                         class="cinemapress-random-index"
+                                         onclick="window.location.href='<%- (category.url && category.url.indexOf('?') + 1 ? category.url + '&random=' : category.url + '?random=') %><%- Math.random() %>'"
                                          title="<%= page.l.random %>">
-                                        <img src="/themes/<%- page.theme %>/public/images/dice.svg" alt="<%= page.l.random %>">
+                                        <img src="/themes/<%- page.theme %>/public/images/dice.svg"
+                                             alt="<%= page.l.random %>">
                                     </div>
                                 </div>
                             </h3>
@@ -41,23 +44,36 @@
                             <div class="row items">
 
                                 <% if (category.movies.length) {
-                                category.movies.forEach(function (movie) { if (movie.hide) { return; } %>
+                                category.movies.forEach(function (movie) { if (movie.hide) {
+                                        return;
+                                    } %>
 
-                                    <div class="col-xs-3 item">
-                                        <a href="<%- movie.url %>">
-                                            <div style="width:100%;height:250px;background: url('<%- movie.poster %>') center no-repeat;background-size: cover;" title="<%= movie.title %>"></div>
-                                        </a>
+                                <div class="col-xs-3 item">
+                                    <a href="<%- movie.url %>">
+                                        <div style="width:100%;height:250px;background: url('<%- movie.poster %>') center no-repeat;background-size: cover;"
+                                             title="<%= movie.title %>"></div>
+                                    </a>
 
-                                        <span class="label label-danger"><% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %><% } else { %><%- movie.year %><% } %></span>
+                                    <span class="label label-danger">
+                                        <% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %>
+                                        <% } else { %><%- movie.year %>
+                                        <% } %>
+                                    </span>
 
 
-                                        <div class="info">
-                                            <div class="title">
-                                                <a href="<%- movie.url %>" class="link" title="<%= movie.title %>"><%= movie.title %></a>
-                                            </div>
-                                            <div class="desc"><% if (movie.translate) { %><%- movie.translate %><% } else if (movie.genres) { %><%- movie.genres %><% } else { %>...<% } %></div>
+                                    <div class="info">
+                                        <div class="title">
+                                            <a href="<%- movie.url %>" class="link"
+                                               title="<%= movie.title %>"><%= movie.title %></a>
+                                        </div>
+                                        <div class="desc">
+                                            <% if (movie.translate) { %><%- movie.translate %>
+                                            <% } else if (movie.genres) { %><%- movie.genres %>
+                                            <% } else { %>...
+                                            <% } %>
                                         </div>
                                     </div>
+                                </div>
 
                                 <% }); } %>
 
@@ -69,7 +85,8 @@
                             <nav>
                                 <ul class="pagination">
                                     <% if (page.pagination.first) { %>
-                                        <li><a href="<%- page.pagination.first.link %>" rel="nofollow"><%- page.pagination.first.number %></a></li>
+                                        <li><a href="<%- page.pagination.first.link %>"
+                                               rel="nofollow"><%- page.pagination.first.number %></a></li>
                                         <li class="disabled"><a href="javascript:void(0)">...</a></li>
                                     <% } %>
                                     <% if (page.pagination.prev.length) { %>
@@ -87,7 +104,8 @@
                                     <% } %>
                                     <% if (page.pagination.last) { %>
                                         <li class="disabled"><a href="javascript:void(0)">...</a></li>
-                                        <li><a href="<%- page.pagination.last.link %>" rel="nofollow"><%- page.pagination.last.number %></a></li>
+                                        <li><a href="<%- page.pagination.last.link %>"
+                                               rel="nofollow"><%- page.pagination.last.number %></a></li>
                                     <% } %>
                                 </ul>
                             </nav>

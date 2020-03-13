@@ -2,14 +2,16 @@
     <h3 class="h3"><%- page.l.top %></h3>
     <ul class="list-unstyled related">
         <% top.forEach(function (movie, i) { %>
-            <li style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><%- i+1 %>. <a href="<%- movie.url %>" title="<%= movie.title %>"><%- movie.title %></a></li>
+            <li style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><%- i + 1 %>. <a
+                        href="<%- movie.url %>" title="<%= movie.title %>"><%- movie.title %></a></li>
         <% }); %>
     </ul>
 <% } else if (typeof slider === 'object' && slider.length) { %>
     <h3 class="h3"><%- page.l.popular %></h3>
     <ul class="list-unstyled related">
         <% slider.forEach(function (movie, i) { %>
-            <li style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><%- i+1 %>. <a href="<%- movie.url %>" title="<%= movie.title %>"><%- movie.title %></a></li>
+            <li style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;"><%- i + 1 %>. <a
+                        href="<%- movie.url %>" title="<%= movie.title %>"><%- movie.title %></a></li>
         <% }); %>
     </ul>
 <% } %>
@@ -56,11 +58,14 @@
                         <div class="cinemapress-comment-user" data-comment-id="<%- comment.id %>">
                             <div class="cinemapress-comment-user-name">
                                 <%- comment.user %>
-                            </div><div class="cinemapress-comment-user-said">
+                            </div>
+                            <div class="cinemapress-comment-user-said">
                                 <%- page.l.said %>
-                            </div><div class="cinemapress-comment-user-date">
+                            </div>
+                            <div class="cinemapress-comment-user-date">
                                 <%- comment.date %>
-                            </div><div class="cinemapress-comment-user-link">
+                            </div>
+                            <div class="cinemapress-comment-user-link">
                                 <a href="<%- comment.url %>#c<%- comment.id %>" title="<%= comment.title %>">#</a>
                             </div>
                         </div>
