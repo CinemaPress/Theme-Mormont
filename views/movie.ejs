@@ -79,14 +79,10 @@
                                     <li><strong><%- page.l.translate %>:</strong> <%- movie.translate %></li>
                                 <% } %>
                                 <% if (movie.kp_vote) { %>
-                                    <li><strong><%- page.l.rating %> <%- page.l.kp %>
-                                            :</strong> <%- movie.kp_rating / 10 %> (<%- movie.kp_vote %>)
-                                    </li>
+                                    <li><strong><%- page.l.rating %> <%- page.l.kp %>:</strong> <%- movie.kp_rating / 10 %> (<%- movie.kp_vote %>)</li>
                                 <% } %>
                                 <% if (movie.imdb_vote) { %>
-                                    <li><strong><%- page.l.rating %> <%- page.l.imdb %>
-                                            :</strong> <%- movie.imdb_rating / 10 %> (<%- movie.imdb_vote %>)
-                                    </li>
+                                    <li><strong><%- page.l.rating %> <%- page.l.imdb %>:</strong> <%- movie.imdb_rating / 10 %> (<%- movie.imdb_vote %>)</li>
                                 <% } %>
                             </ul>
 
