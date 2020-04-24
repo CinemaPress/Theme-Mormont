@@ -26,7 +26,7 @@
 
                             <h1 class="h3"><%- page.h1 %></h1>
 
-                            <% if (typeof content === 'object') { %>
+                            <% if (typeof content === 'object' && page.current_page === 1) { %>
                                 <div class="cinemapress-content">
                                     <% if (content.image) { %>
                                         <img src="<%- content.image %>" class="cinemapress-content-image">
@@ -144,7 +144,7 @@
                             </nav>
                         <% } %>
 
-                        <% if (typeof content === 'object') { %>
+                        <% if (typeof content === 'object' && page.current_page === 1) { %>
                             <% if (page.comments) { %>
                                 <%- page.comments %>
                             <% } else { %>
