@@ -357,7 +357,7 @@
 
                             <div class="row items">
 
-                                <% if (category.movies.length) {
+                                <% if (typeof category === 'object' && category.movies && category.movies.length) {
                                     category.movies.splice(4, category.movies.length % 4);
                                 category.movies.forEach(function (movie) { %>
 
