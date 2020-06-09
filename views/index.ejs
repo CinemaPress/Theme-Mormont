@@ -6,6 +6,11 @@
 
 </head>
 <body>
+
+<% if (typeof page.adv === 'object' && page.adv.brand) { %>
+    <%- page.adv.brand %>
+<% } %>
+
 <div id="wrapper">
     <div class="content-wrapper">
         <div class="content">
