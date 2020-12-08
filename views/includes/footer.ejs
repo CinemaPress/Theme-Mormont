@@ -44,8 +44,7 @@
     </span>
 
     <div style="float:right;  text-align: right; width:300px; padding-top: 12px; padding-bottom: 12px;">
-        &copy;&nbsp;<%- new Date().getFullYear() %>&nbsp;<a href="https://cinemapress.io"
-                                                            target="_blank">CinemaPress</a>
+        &copy;&nbsp;<%- new Date().getFullYear() %>&nbsp;<a href="https://cinemapress.io" target="_blank">CinemaPress</a>
     </div>
 
     <script>
@@ -63,6 +62,21 @@
         if (ok) ok.href = 'http://connect.ok.ru/dk?st.cmd=WidgetSharePreview&service=odnoklassniki&st.shareUrl=' + encodeURIComponent(url);
       });
 
+    </script>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function(e) {
+        var dataCinemapressSrc = document.querySelectorAll('[data-cinemapress-src]');
+        if (!dataCinemapressSrc) return;
+        dataCinemapressSrc.forEach(function(cinemapressSrc) {
+          cinemapressSrc.src = cinemapressSrc.dataset.cinemapressSrc;
+        });
+        var dataCinemapressBgSrc = document.querySelectorAll('[data-cinemapress-bg-src]');
+        if (!dataCinemapressBgSrc) return;
+        dataCinemapressBgSrc.forEach(function(cinemapressBgSrc) {
+          cinemapressBgSrc.style.backgroundImage = 'url("' + cinemapressBgSrc.dataset.cinemapressBgSrc + '")';
+        });
+      });
     </script>
 
 </div>
