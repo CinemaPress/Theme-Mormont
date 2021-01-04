@@ -368,8 +368,7 @@
 
                                     <div class="col-xs-3 item">
                                         <a href="<%- movie.url %>">
-                                            <div style="width:100%;height:250px;background: url('<%- movie.poster %>') center no-repeat;background-size: cover;"
-                                                 title="<%= movie.title %>"></div>
+                                            <div style="width:100%;height:250px;background: url('<%- movie.poster_min %>') center no-repeat;background-size: cover;" class="lazy" data-bg="<%- movie.poster %>" title="<%= movie.title %>"></div>
                                         </a>
 
                                         <div class="info">
