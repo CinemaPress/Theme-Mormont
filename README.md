@@ -1,10 +1,10 @@
 # Theme «mormont»
 
-![Theme «mormont» for CinemaPress](https://raw.githubusercontent.com/CinemaPress/Theme-Mormont/master/screenshot.png "Theme «mormont» for CinemaPress")
+![Theme «mormont» for CinemaPress](https://raw.githubusercontent.com/CinemaPress/Theme-Mormont/master/screenshot.png)
 
 :art: Theme «mormont» for CinemaPress
 
-- [Mormont.CinemaPress.io](http://Mormont.CinemaPress.io/)
+- `«mormont»`
 
 ## How to install?
 1. Download [GitHub](https://github.com/CinemaPress/Theme-Mormont/archive/master.zip) or [GitLab](https://gitlab.com/CinemaPress/Theme-Mormont/repository/archive.zip) or [BitBucket](https://bitbucket.org/cinemapress/theme-mormont/get/master.zip)
